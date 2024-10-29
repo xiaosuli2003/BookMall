@@ -31,24 +31,32 @@ public class BookRvAdapter extends RecyclerView.Adapter<BookRvAdapter.GridRvView
 
     @Override
     public void onBindViewHolder(@NonNull GridRvViewHolder holder, int position) {
-        holder.image.setImageResource(data.get(position).getImage());
-        holder.text.setText(data.get(position).getText());
+        holder.bookCover.setImageResource(data.get(position).getCover());
+        holder.bookName.setText(data.get(position).getBookName());
+        holder.bookAuthor.setText(data.get(position).getAuthor());
+        holder.publishingHouse.setText(data.get(position).getPublishingHouse());
+        holder.bookPrice.setText(data.get(position).getPrice());
     }
-
-
+    
     @Override
     public int getItemCount() {
         return data.size();
     }
 
     public static class GridRvViewHolder extends RecyclerView.ViewHolder {
-        AppCompatImageView image;
-        AppCompatTextView text;
+        AppCompatImageView bookCover;
+        AppCompatTextView bookName;
+        AppCompatTextView bookAuthor;
+        AppCompatTextView publishingHouse;
+        AppCompatTextView bookPrice;
 
         public GridRvViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.grid_rv_item_image);
-            text = itemView.findViewById(R.id.grid_rv_item_text);
+            bookCover = itemView.findViewById(R.id.book_rv_item_book_cover);
+            bookName = itemView.findViewById(R.id.book_rv_item_book_name);
+            bookAuthor = itemView.findViewById(R.id.book_rv_item_book_author);
+            publishingHouse = itemView.findViewById(R.id.book_rv_item_publishing_house);
+            bookPrice = itemView.findViewById(R.id.book_rv_item_book_price);
         }
     }
 }

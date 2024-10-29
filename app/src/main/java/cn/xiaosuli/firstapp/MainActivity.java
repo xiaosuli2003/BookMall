@@ -1,6 +1,5 @@
 package cn.xiaosuli.firstapp;
 
-import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.Menu;
@@ -33,11 +32,15 @@ public class MainActivity extends AppCompatActivity {
         gridRv1.setAdapter(gridRvAdapter);
         // StaggeredGrid RecyclerView
         RecyclerView gridRv2 = findViewById(R.id.grid_rv2);
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, RecyclerView.VERTICAL);
+        StaggeredGridLayoutManager staggeredGridLayoutManager
+                = new StaggeredGridLayoutManager(2, RecyclerView.VERTICAL);
         gridRv2.setLayoutManager(staggeredGridLayoutManager);
         gridRv2.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
-            public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+            public void getItemOffsets(@NonNull Rect outRect,
+                                       @NonNull View view,
+                                       @NonNull RecyclerView parent,
+                                       @NonNull RecyclerView.State state) {
                 outRect.left = 18;
                 outRect.right = 18;
                 outRect.top = 18;
@@ -70,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         data.add(new BookRvItem(R.drawable.book18, "Python语言程序设计", "教育部考试中心", "高等教育出版社", "48.00"));
         data.add(new BookRvItem(R.drawable.book19, "C++ Primer Plus中文版第6版", "张海龙", "人民邮电出版社", "118.00"));
         data.add(new BookRvItem(R.drawable.book20, "Visual Studio Code 权威指南", "韩骏", "电子工业出版社", "99.00"));
-
         return data;
     }
 
@@ -96,14 +98,12 @@ public class MainActivity extends AppCompatActivity {
         data.add(new GridRvItem(R.drawable.icon_ziran, "自然"));
         return data;
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.option_menu_my) {

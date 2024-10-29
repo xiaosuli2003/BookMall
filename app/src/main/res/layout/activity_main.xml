@@ -29,58 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="10dp"/>
 
-    <!--<androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="10dp">
-
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="7"
-            android:layout_height="2dp"
-            android:background="@color/light_gray"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_gravity="center"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="2dp"
-            android:background="@color/light_gray"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_gravity="center"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="7"
-            android:layout_height="2dp"
-            android:background="@color/light_gray"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_gravity="center"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="2dp"
-            android:background="@color/light_gray"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_gravity="center"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="7"
-            android:layout_height="2dp"
-            android:background="@color/light_gray"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_gravity="center"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>-->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/grid_rv2"
         android:layout_width="match_parent"
