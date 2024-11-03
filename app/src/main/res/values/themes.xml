@@ -1,31 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.FirstApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">#0CB813</item>
-        <item name="colorPrimaryDark">#045D08</item>
-        <item name="colorOnPrimary">@color/black</item>
-    </style>
+    <style name="Theme.FirstApp" parent="Theme.Material3.DynamicColors.DayNight">
 
-   <!-- <style name="Theme.FirstApp" parent="Theme.Material3.DynamicColors.DayNight">
-        <item name="colorPrimary">#FFC107</item>
-        <item name="colorPrimaryDark">#9BFA2F</item>
-<item name="colorSecondary">#FFC107</item>
-       <item name="android:colorBackground">#475d92</item>
-        <item name="colorError">#475d92</item>
-        <item name="colorPrimaryInverse">#475d92</item>
-        <item name="colorPrimaryContainer">#FFC107</item>
-        <item name="colorOnPrimaryContainer">#FFC107</item>
-        <item name="colorSecondaryContainer">#FFC107</item>
-        <item name="colorOnSecondaryContainer">#475d92</item>
-        <item name="colorTertiary">#FFC107</item>
-        <item name="colorOnTertiary">#FFC107</item>
-        <item name="colorTertiaryContainer">#FFC107</item>
-        <item name="colorOnTertiaryContainer">#FFC107</item>
-        <item name="colorSurfaceVariant">#94F029</item>
-        <item name="colorOnSurfaceVariant">#FFC107</item>
-        <item name="colorSurfaceInverse">#FFC107</item>
-        <item name="colorOnSurfaceInverse">#FFC107</item>
-        <item name="colorOutline">#FFC107</item>
-        <item name="colorErrorContainer">#475d92</item>
-        <item name="colorOnErrorContainer">#475d92</item>
-    </style>-->
+    </style>
 </resources>
