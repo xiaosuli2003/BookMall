@@ -17,7 +17,7 @@ public class BookListActivity extends AppCompatActivity {
 
         ListView listview = findViewById(R.id.listview);
 
-        List<Book> data = new ArrayList<>();
+        /*List<Book> data = new ArrayList<>();
         data.add(new Book(R.drawable.book1, "计算机组成原理(第3版)", "唐朔飞", "高等教育出版社", "35.00"));
         data.add(new Book(R.drawable.book2, "计算机网络教材+习题解答", "谢希仁", "电子工业出版社", "45.00"));
         data.add(new Book(R.drawable.book3, "成事之道", "未知作者", "未知出版社", "00.00"));
@@ -40,6 +40,6 @@ public class BookListActivity extends AppCompatActivity {
         data.add(new Book(R.drawable.book20, "Visual Studio Code 权威指南", "韩骏", "电子工业出版社", "99.00"));
 
         MyListViewAdapter adapter = new MyListViewAdapter(data, BookListActivity.this);
-        listview.setAdapter(adapter);
+        listview.setAdapter(adapter);*/
     }
 }
