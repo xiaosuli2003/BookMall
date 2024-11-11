@@ -6,52 +6,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    tools:context=".MainActivity">
+    android:padding="40dp"
+    tools:context=".LoginActivity">
 
-    <com.google.android.material.textview.MaterialTextView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="用户登录"
-        android:textSize="30dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="60dp"
+        android:text="用户登录"
+        android:textSize="28dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:hint="请输入用户名">
+        android:hint="用户名">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_edit"
             android:layout_width="match_parent"
-            android:id="@+id/username"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
-        android:hint="请输入密码"
-        app:endIconMode="password_toggle">
+        android:hint="密码">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/password"
-            android:inputType="textPassword" />
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginBtn"
+        app:cornerRadius="10dp"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:backgroundTint="@color/inversePrimary"
+        android:layout_height="60dp"
         android:text="登录" />
 
     <TextView

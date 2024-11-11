@@ -1,4 +1,4 @@
-package cn.xiaosuli.firstapp;
+package cn.xiaosuli.bookmall;
 
 import androidx.annotation.DrawableRes;
 

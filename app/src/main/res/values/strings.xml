@@ -1,6 +1,3 @@
 <resources>
-    <string name="app_name">张晓凡</string>
-    <string name="words">“因过竹院逢僧话，偷得浮生半日闲。”\n—— 礼舍的《题鹤林寺僧舍》表达了在忙碌生活中找到片刻宁静的愿望。</string>
-    <string name="words2">“世事浮云何足问，不如高卧且加餐。”\n—— 王维的这句诗鼓励人们看淡世俗纷争，重视身体健康和享受生活。</string>
-    <string name="words3">每一个不曾起舞的日子，都是对生命的辜负。</string>
+    <string name="app_name">图书商城</string>
 </resources>

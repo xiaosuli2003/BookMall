@@ -1,12 +1,12 @@
-package cn.xiaosuli.firstapp;
+package cn.xiaosuli.bookmall;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.button.MaterialButton;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -18,8 +18,8 @@ public class RegisterActivity extends AppCompatActivity {
         EditText passwordEdit = findViewById(R.id.password_edit);
         EditText emailEdit = findViewById(R.id.email_edit);
         EditText phoneEdit = findViewById(R.id.phone_edit);
-        MaterialButton registerBtn = findViewById(R.id.register_btn);
-        MaterialButton goUserInfo = findViewById(R.id.go_user_info);
+        Button registerBtn = findViewById(R.id.register_btn);
+        Button goUserInfo = findViewById(R.id.go_user_info);
 
         registerBtn.setOnClickListener(v -> {
             String username = usernameEdit.getText().toString().trim();

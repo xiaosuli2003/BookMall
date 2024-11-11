@@ -1,4 +1,4 @@
-package cn.xiaosuli.firstapp;
+package cn.xiaosuli.bookmall;
 
 import android.os.Bundle;
 import android.widget.ListView;
@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class BookListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         data.add(new Book(R.drawable.book19, "C++ Primer Plus中文版第6版", "张海龙", "人民邮电出版社", "118.00"));
         data.add(new Book(R.drawable.book20, "Visual Studio Code 权威指南", "韩骏", "电子工业出版社", "99.00"));
 
-        MyListViewAdapter adapter = new MyListViewAdapter(data, MainActivity.this);
+        MyListViewAdapter adapter = new MyListViewAdapter(data, BookListActivity.this);
         listview.setAdapter(adapter);
     }
 }

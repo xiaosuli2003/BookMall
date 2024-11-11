@@ -21,7 +21,7 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <com.google.android.material.textview.MaterialTextView
+        <TextView
             android:id="@+id/book_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <com.google.android.material.textview.MaterialTextView
+        <TextView
             android:id="@+id/book_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,27 +51,27 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.google.android.material.textview.MaterialTextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="3dp"
                 android:text="¥"
-                android:textColor="@color/red"
+                android:textColor="#F44336"
                 android:textSize="18sp" />
 
-            <com.google.android.material.textview.MaterialTextView
+            <TextView
                 android:id="@+id/book_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="22.22"
-                android:textColor="@color/red"
+                android:textColor="#F44336"
                 android:textSize="18sp" />
 
-            <com.google.android.material.textview.MaterialTextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="元"
-                android:textColor="@color/red"
+                android:textColor="#F44336"
                 android:textSize="18sp" />
 
             <View
@@ -79,7 +79,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
-            <com.google.android.material.textview.MaterialTextView
+            <TextView
                 android:id="@+id/publishing_house"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

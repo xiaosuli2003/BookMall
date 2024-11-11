@@ -7,78 +7,54 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".BookListActivity">
 
-    <com.google.android.material.textview.MaterialTextView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="用户注册"
-        android:textSize="30dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="30dp"
+        android:text="用户注册"
+        android:textSize="30dp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+
+    <EditText
+        android:id="@+id/username_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="15dp"
-        android:hint="请输入用户名">
+        android:hint="请输入用户名"
+        android:inputType="text" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:id="@+id/username_edit"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+    <EditText
+        android:id="@+id/email_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="15dp"
-        android:hint="请输入邮箱">
+        android:hint="请输入邮箱"
+        android:inputType="text" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:id="@+id/email_edit"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+    <EditText
+        android:id="@+id/phone_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="15dp"
-        android:hint="请输入手机号">
+        android:hint="请输入手机号"
+        android:inputType="text" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:id="@+id/phone_edit"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+    <EditText
+        android:id="@+id/password_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="30dp"
         android:hint="请输入密码"
-        app:endIconMode="password_toggle">
+        android:inputType="textPassword" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/password_edit"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -86,9 +62,9 @@
 
     <View
         android:layout_width="0dp"
-        android:layout_height="10dp"/>
+        android:layout_height="10dp" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/go_user_info"
         android:layout_width="match_parent"
         android:layout_height="55dp"

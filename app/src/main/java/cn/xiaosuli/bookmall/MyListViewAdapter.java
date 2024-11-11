@@ -1,16 +1,15 @@
-package cn.xiaosuli.firstapp;
+package cn.xiaosuli.bookmall;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
 
@@ -66,10 +65,10 @@ public class MyListViewAdapter extends BaseAdapter {
 
     private static class MyListViewHolder extends RecyclerView.ViewHolder{
         AppCompatImageView cover;
-        MaterialTextView bookName;
-        MaterialTextView author;
-        MaterialTextView publishingHouse;
-        MaterialTextView price;
+        TextView bookName;
+        TextView author;
+        TextView publishingHouse;
+        TextView price;
 
         public MyListViewHolder(@NonNull View itemView) {
             super(itemView);
