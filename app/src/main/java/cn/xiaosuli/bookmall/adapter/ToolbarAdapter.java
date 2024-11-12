@@ -27,7 +27,7 @@ public class ToolbarAdapter extends RecyclerView.Adapter<ToolbarAdapter.GridRvVi
     @NonNull
     @Override
     public GridRvViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.grid_rv_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.toolbar_item, parent, false);
         return new GridRvViewHolder(view);
     }
 

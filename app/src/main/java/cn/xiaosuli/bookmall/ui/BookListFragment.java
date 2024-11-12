@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.xiaosuli.bookmall.R;
+import cn.xiaosuli.bookmall.adapter.BookLvAdapter;
 import cn.xiaosuli.bookmall.databinding.FragmentBookListBinding;
 import cn.xiaosuli.bookmall.model.BookItem;
 
@@ -48,8 +49,8 @@ public class BookListFragment extends Fragment {
         data.add(new BookItem(R.drawable.book19, "C++ Primer Plus中文版第6版", "张海龙", "人民邮电出版社", "118.00"));
         data.add(new BookItem(R.drawable.book20, "Visual Studio Code 权威指南", "韩骏", "电子工业出版社", "99.00"));
 
-        MyListViewAdapter adapter = new BookLv(data, BookListActivity.this);
-        listview.setAdapter(adapter);
+        BookLvAdapter adapter = new BookLvAdapter(data, getActivity());
+        binding.bookList.setAdapter(adapter);
 
         return binding.getRoot();
     }

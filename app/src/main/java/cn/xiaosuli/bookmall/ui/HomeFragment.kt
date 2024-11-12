@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.ui.tooling.data.EmptyGroup.data
 import androidx.fragment.app.Fragment
+import cn.xiaosuli.bookmall.adapter.ToolbarAdapter
 import cn.xiaosuli.bookmall.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -19,7 +21,11 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        binding
+        val toolbarAdapter = ToolbarAdapter(activity, data)
+        binding.toolbar.apply {
+
+            adapter = toolbarAdapter
+        }
         return binding.root
     }
 
