@@ -7,10 +7,19 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".BookListActivity">
+    tools:context=".ui.BookListFragment">
 
-    <ListView
-        android:id="@+id/listview"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_weight="1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        app:labelVisibilityMode="selected"
+        android:layout_height="wrap_content"
+        app:menu="@menu/main_bottom_nav" />
 </androidx.appcompat.widget.LinearLayoutCompat>

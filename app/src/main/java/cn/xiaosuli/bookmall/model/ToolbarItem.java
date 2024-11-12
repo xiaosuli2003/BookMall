@@ -1,13 +1,13 @@
-package cn.xiaosuli.firstapp;
+package cn.xiaosuli.bookmall.model;
 
 import androidx.annotation.DrawableRes;
 
-public class GridRvItem {
+public class ToolbarItem {
     @DrawableRes
     private Integer image;
     private String text;
 
-    public GridRvItem(Integer image, String text) {
+    public ToolbarItem(Integer image, String text) {
         this.image = image;
         this.text = text;
     }

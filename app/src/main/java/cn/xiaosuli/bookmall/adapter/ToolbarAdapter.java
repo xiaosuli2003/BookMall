@@ -1,4 +1,4 @@
-package cn.xiaosuli.bookmall;
+package cn.xiaosuli.bookmall.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,12 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import cn.xiaosuli.bookmall.R;
+import cn.xiaosuli.bookmall.model.ToolbarItem;
 
-public class GridRvAdapter extends RecyclerView.Adapter<GridRvAdapter.GridRvViewHolder> {
+public class ToolbarAdapter extends RecyclerView.Adapter<ToolbarAdapter.GridRvViewHolder> {
     private final Context context;
-    private final List<cn.xiaosuli.firstapp.GridRvItem> data;
+    private final List<ToolbarItem> data;
 
-    public GridRvAdapter(Context context, List<cn.xiaosuli.firstapp.GridRvItem> data) {
+    public ToolbarAdapter(Context context, List<ToolbarItem> data) {
         this.context = context;
         this.data = data;
     }

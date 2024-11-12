@@ -1,8 +1,8 @@
-package cn.xiaosuli.bookmall;
+package cn.xiaosuli.bookmall.model;
 
 import androidx.annotation.DrawableRes;
 
-public class BookRvItem {
+public class BookItem {
     @DrawableRes
     private Integer cover;
     /* 书名 */
@@ -14,7 +14,7 @@ public class BookRvItem {
     /* 价格 */
     private String price;
 
-    public BookRvItem(Integer cover, String bookName, String author, String publishingHouse, String price) {
+    public BookItem(Integer cover, String bookName, String author, String publishingHouse, String price) {
         this.cover = cover;
         this.bookName = bookName;
         this.author = author;

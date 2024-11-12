@@ -1,4 +1,4 @@
-package cn.xiaosuli.firstapp;
+package cn.xiaosuli.bookmall.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import cn.xiaosuli.bookmall.BookRvItem;
+import cn.xiaosuli.bookmall.model.BookItem;
 import cn.xiaosuli.bookmall.R;
 
 public class BookRvAdapter extends RecyclerView.Adapter<BookRvAdapter.GridRvViewHolder> {
     private final Context context;
-    private final List<BookRvItem> data;
+    private final List<BookItem> data;
 
-    public BookRvAdapter(Context context, List<BookRvItem> data) {
+    public BookRvAdapter(Context context, List<BookItem> data) {
         this.context = context;
         this.data = data;
     }

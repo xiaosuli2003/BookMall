@@ -6,69 +6,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="40dp"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="60dp"
-        android:text="用户登录"
-        android:textSize="28dp" />
+        android:layout_height="match_parent"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="25dp"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="用户名">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username_edit"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp"
+            android:text="用户登录"
+            android:textSize="28dp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="25dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="密码">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:hint="用户名">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="25dp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginBtn"
-        app:cornerRadius="10dp"
-        android:layout_width="match_parent"
-        android:backgroundTint="@color/inversePrimary"
-        android:layout_height="60dp"
-        android:text="登录" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
 
-    <TextView
-        android:id="@+id/go_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="right"
-        android:text="没有账号？立即注册。"
-        android:textSize="15sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="密码">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
+            app:cornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/inversePrimary"
+            android:layout_height="60dp"
+            android:text="登录" />
+
+        <TextView
+            android:id="@+id/go_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="right"
+            android:text="没有账号？立即注册。"
+            android:textSize="15sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
