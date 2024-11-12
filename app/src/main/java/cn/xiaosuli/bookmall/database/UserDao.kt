@@ -2,14 +2,16 @@ package cn.xiaosuli.bookmall.database
 
 import androidx.room.Dao
 import androidx.room.Query
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDao {
 
     @Query("SELECT * FROM user WHERE username = :username and password = :password")
-    fun findOne(username: String, password: String): Flow<User?>
+    suspend fun findOne(username: String, password: String): User?
 
-    @Query("insert into user(username,password) values(:username,:password)")
-    fun insert(username: String, password: String)
+    @Query("SELECT * FROM user WHERE username = :username")
+    suspend fun findOneByUsername(username: String): User?
+
+    @Query("insert into user(username,password,email,phone) values(:username,:password,:email,:phone)")
+    suspend fun insert(username: String, password: String, email: String, phone: String): Long
 }

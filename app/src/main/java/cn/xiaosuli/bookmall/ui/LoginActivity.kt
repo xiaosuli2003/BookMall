@@ -5,14 +5,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
+import androidx.core.content.edit
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import cn.xiaosuli.bookmall.R
 import cn.xiaosuli.bookmall.database.AppDatabase
 import cn.xiaosuli.bookmall.databinding.ActivityLoginBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 class LoginActivity : ComponentActivity() {
@@ -31,35 +30,56 @@ class LoginActivity : ComponentActivity() {
             insets
         }
 
-        val userDao = AppDatabase.userDao
-        lifecycleScope.launch(Dispatchers.IO) {
-            userDao.insert("admin", "123456")
+        val preferences = getSharedPreferences("app_user", MODE_PRIVATE)
+
+        val loginUser = preferences.getString("login_user", "")
+        if (loginUser != "") {
+            goMainActivity()
         }
+
+        if (preferences.getBoolean("isChecked", false)) {
+            binding.usernameEdit.setText(preferences.getString("username", ""))
+            binding.passwordEdit.setText(preferences.getString("password", ""))
+            binding.checkbox.isChecked = true
+        }
+
         binding.loginBtn.setOnClickListener {
             val username = binding.usernameEdit.text.toString().trim { it <= ' ' }
             val password = binding.passwordEdit.text.toString().trim { it <= ' ' }
+            val isChecked = binding.checkbox.isChecked
             lifecycleScope.launch {
-                userDao.findOne(username, password).collectLatest{
-                    if (it == null) {
-                        Toast.makeText(this@LoginActivity, "用户名或密码错误！", Toast.LENGTH_SHORT).show()
-                        return@collectLatest
-                    }
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                    startActivity(intent)
+                val user = AppDatabase.userDao.findOne(username, password)
+                if (user == null) {
+                    Toast.makeText(this@LoginActivity, "用户名或密码错误！", Toast.LENGTH_SHORT)
+                        .show()
+                    return@launch
                 }
+                preferences.edit {
+                    if (isChecked) {
+                        putString("login_user", username)
+                        putString("username", username)
+                        putString("password", password)
+                        putBoolean("isChecked", true)
+                    } else {
+                        putString("login_user", username)
+                        remove("username")
+                        remove("password")
+                        remove("isChecked")
+                    }
+                }
+                goMainActivity()
             }
         }
-    } /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        Log.i("LoginActivity", "requestCode:" + requestCode);
-        Log.i("LoginActivity", "resultCode:" + resultCode);
-        if (requestCode == 2233) {
-            Bundle bundle = data.getExtras();
-            String username = bundle.getString("username", "");
-            String password = bundle.getString("password", "");
-            usernameEdit.setText(username);
-            passwordEdit.setText(password);
+
+        binding.goRegister.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
         }
-    }*/
+    }
+
+    private fun goMainActivity() {
+        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+        startActivity(intent)
+        this@LoginActivity.finish()
+    }
 }

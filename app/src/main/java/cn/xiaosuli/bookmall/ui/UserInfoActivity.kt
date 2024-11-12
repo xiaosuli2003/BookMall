@@ -1,35 +1,42 @@
-package cn.xiaosuli.bookmall.ui;
+package cn.xiaosuli.bookmall.ui
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.TextView;
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import cn.xiaosuli.bookmall.database.AppDatabase
+import cn.xiaosuli.bookmall.databinding.ActivityUserInfoBinding
+import kotlinx.coroutines.launch
 
-import androidx.appcompat.app.AppCompatActivity;
+class UserInfoActivity : AppCompatActivity() {
 
-import cn.xiaosuli.bookmall.R;
+    private val binding: ActivityUserInfoBinding by lazy {
+        ActivityUserInfoBinding.inflate(layoutInflater)
+    }
 
-public class UserInfoActivity extends AppCompatActivity {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(binding.root)
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_info);
+        ViewCompat.setOnApplyWindowInsetsListener(binding.topAppBar) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(0, systemBars.top, 0, 0)
+            insets
+        }
 
-        TextView usernameTv = findViewById(R.id.username);
-        TextView passwordTv = findViewById(R.id.password);
-        TextView emailTv = findViewById(R.id.email);
-        TextView phoneTv = findViewById(R.id.phone);
-        
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        String username = bundle.getString("username");
-        String password = bundle.getString("password");
-        String email = bundle.getString("email");
-        String phone = bundle.getString("phone");
+        binding.topAppBar.setNavigationOnClickListener { finish() }
 
-        usernameTv.setText(username);
-        passwordTv.setText(password);
-        emailTv.setText(email);
-        phoneTv.setText(phone);
+        val preferences = getSharedPreferences("app_user", MODE_PRIVATE)
+        val username: String = preferences.getString("login_user", "")!!
+        lifecycleScope.launch {
+            val user = AppDatabase.userDao.findOneByUsername(username) ?: return@launch
+            binding.usernameTv.text = user.username
+            binding.emailTv.text = user.email
+            binding.phoneTv.text = user.phone
+            binding.passwordTv.text = user.password
+        }
     }
 }

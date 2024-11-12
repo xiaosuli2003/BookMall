@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_top_app_bar_share"
+        android:icon="@drawable/icon_outline_share_24"
+        android:title="分享"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/main_top_app_bar_kefu"
+        android:icon="@drawable/icon_outline_service_24"
+        android:title="在线客服"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/main_top_app_bar_help"
+        android:icon="@drawable/icon_outline_help_24"
+        android:title="帮助"
+        app:showAsAction="ifRoom"/>
+</menu>

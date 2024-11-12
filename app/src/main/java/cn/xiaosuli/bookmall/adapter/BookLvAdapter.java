@@ -47,7 +47,7 @@ public class BookLvAdapter extends BaseAdapter {
 
         if (convertView == null) {
             // 如果没有可复用的视图，则创建新的视图和ViewHolder
-            view = LayoutInflater.from(context).inflate(R.layout.book_rv_item, parent, false);
+            view = LayoutInflater.from(context).inflate(R.layout.book_list_item, parent, false);
             viewHolder = new MyListViewHolder(view);
             view.setTag(viewHolder);
         } else {
