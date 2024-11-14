@@ -15,13 +15,35 @@
         android:paddingStart="40dp"
         android:paddingEnd="40dp">
 
-        <TextView
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="60dp"
-            android:text="用户注册"
-            android:textSize="28dp" />
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                app:strokeWidth="0dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+
+                    android:src="@drawable/app_icon_1"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册一个你的账号吧！"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <View
             android:layout_width="match_parent"

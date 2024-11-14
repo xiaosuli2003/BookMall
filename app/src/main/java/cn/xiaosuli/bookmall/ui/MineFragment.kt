@@ -21,6 +21,7 @@ class MineFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMineBinding.inflate(inflater, container, false)
+
         binding.userInfoBar.setOnClickListener { goUserInfoActivity() }
         binding.userInfoCard.setOnClickListener { goUserInfoActivity() }
 

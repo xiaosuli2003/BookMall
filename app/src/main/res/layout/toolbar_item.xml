@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="75dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="19.5dp"
+    android:paddingEnd="19.5dp">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/grid_rv_item_image"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="5dp"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -17,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="15sp"
         android:text="电话"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

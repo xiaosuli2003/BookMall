@@ -1,5 +1,6 @@
 package cn.xiaosuli.bookmall.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -71,7 +72,13 @@ class MainActivity : AppCompatActivity() {
         binding.topAppBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.main_top_app_bar_share -> {
-                    Toast.makeText(this, "分享", Toast.LENGTH_SHORT).show()
+                    val shareIntent = Intent(Intent.ACTION_SEND)
+                    shareIntent.setType("text/plain") // 设置分享内容类型为文本
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, "安卓期末大作业--图书商城") // 设置分享的内容
+                    // 通过Chooser选择分享方式
+                    val chooser = Intent.createChooser(shareIntent, "选择一个分享方式")
+                    startActivity(chooser)
+
                     true
                 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingStart="10dp"
     android:paddingTop="5dp"
@@ -10,8 +10,8 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/book_cover"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
         android:src="@drawable/icon_shengwu"
         android:layout_marginEnd="10dp"/>
 
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C++ Primer PLus中文第6版"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <View
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="张海龙"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
 
         <View
             android:layout_width="wrap_content"
@@ -57,22 +57,23 @@
                 android:layout_marginEnd="3dp"
                 android:text="¥"
                 android:textColor="@color/error"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/book_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="22.22"
+                android:textStyle="bold"
                 android:textColor="@color/error"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="元"
                 android:textColor="@color/error"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <View
                 android:layout_width="0dp"
@@ -83,6 +84,7 @@
                 android:id="@+id/publishing_house"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="12sp"
                 android:text="人民邮电出版社" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
